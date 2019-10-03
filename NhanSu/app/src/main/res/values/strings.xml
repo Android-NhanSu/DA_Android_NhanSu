@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="quenmatkhau">Quên mật khẩu ?</string>
+    <string name="trogiup">Trợ giúp</string>
+    <string name="user">User</string>
+    <string name="password">PassWord</string>
+    <string name="log_in">Log In</string>
+</resources>
