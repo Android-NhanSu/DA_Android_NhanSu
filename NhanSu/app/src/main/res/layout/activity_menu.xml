@@ -53,15 +53,15 @@
         android:textSize="24dp" />
 
 
-    <ImageView
+    <com.example.nhansu.Model_Adapter.CicleImage
         android:id="@+id/imageView2"
-        android:layout_width="111dp"
-        android:layout_height="96dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignWithParentIfMissing="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
 
-        app:srcCompat="@drawable/logo_dhcntp" />
+        android:src="@drawable/logo_dhcntp" />
 
     <Button
         android:id="@+id/button2"
