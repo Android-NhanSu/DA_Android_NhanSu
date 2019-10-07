@@ -3,4 +3,59 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <TextView
+        android:id="@+id/txtngay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="24dp" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/giovao"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="Gio vao"
+            android:textSize="24dp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/dulieugiovao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textSize="24dp"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/giora"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="Gio ra"
+            android:textSize="24dp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/dulieugiora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textSize="24dp"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
 </LinearLayout>

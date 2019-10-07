@@ -39,21 +39,26 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="87dp"
+            android:layout_height="88dp"
             android:layout_gravity="center"
             android:background="#032C35">
 
-            <SearchView
-                android:id="@+id/timkimtheongaythang"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="279dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/duongcong"
-                android:gravity="center"
-                android:iconifiedByDefault="false"
-                android:queryHint="Tìm kiếm theo ngày tháng" />
-        </FrameLayout>
 
+                android:background="@drawable/duongcong"
+                android:ems="10"
+                android:hint="Chọn ngày"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
 
         <ListView
             android:id="@+id/chamcong"
