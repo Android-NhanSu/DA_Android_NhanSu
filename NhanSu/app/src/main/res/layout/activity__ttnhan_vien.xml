@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_TTNhanVien">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/background_light">
+
+                <ImageButton
+                    android:id="@+id/btn_trove"
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/homeAsUpIndicator" />
+
+                <TextView
+                    android:id="@+id/textView_ChamCong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Thông Tin Nhân Viên"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="502dp"
+                android:background="#032C35"></View>
+
+            <TextView
+                android:id="@+id/textView_Ten"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:text="Lê Thị Mỹ Hương"
+                android:textColor="#ffff"
+                android:textSize="24sp" />
+
+
+            <com.example.nhansu.Model_Adapter.CicleImage
+                android:id="@+id/imageView2"
+                android:layout_width="81dp"
+                android:layout_height="82dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+
+                android:src="@drawable/nhanvien" />
+
+
+
+
+
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/listviewTTNV"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

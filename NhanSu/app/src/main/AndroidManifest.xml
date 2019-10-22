@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Luong"></activity>
-        <activity android:name=".LSChamCong"></activity>
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".activity_TTNhanVien"></activity>
+        <activity android:name=".Luong" />
+        <activity android:name=".LSChamCong" />
+        <activity android:name=".Menu" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ThongKe">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

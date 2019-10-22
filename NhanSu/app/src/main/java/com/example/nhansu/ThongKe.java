@@ -65,23 +65,27 @@ public class ThongKe extends AppCompatActivity {
         data.setBarWidth(0.7f);
         bc.setData(data);
 
-       String[] tk=new String[]{"Tổng ","ngày làm","Số ngày nghĩ","Nghĩ ","co phép"};
+      /*  String[] tk=new String[]{"t","nl","nn","cp","kp"};
         XAxis xAxis=bc.getXAxis();
-        xAxis.setValueFormatter(new MyXAxisValuesFormatter(tk));
-        //xAxis.setPosition(XAxis.XAxisPosition.BOTH_SIDED);
+        xAxis.setValueFormatter(new MyXAxisValuesFormatter(tk));*/
 
     }
-    public class MyXAxisValuesFormatter extends ValueFormatter implements IAxisValueFormatter {
+    /*public class MyXAxisValuesFormatter implements IAxisValueFormatter {
         private String[]mValues;
         public MyXAxisValuesFormatter(String[] values)
         {
             this.mValues=values;
         }
-        @Override
+
+        /*public String getFormattedValue(float value, AxisBase axis) {
+            return mValues[(int) value];
+        }*/
+
+       /* @Override
         public String getFormattedValue(float value, AxisBase axis) {
-            return mValues[(int)value];
+            return null;
         }
-    }
+    }*/
 
     private void setWight() {
         editDate = (EditText) findViewById(R.id.editTextDate);
@@ -102,5 +106,6 @@ public class ThongKe extends AppCompatActivity {
         }, nam, thang, ngay);
         datePickerDialog.show();
     }
+
 
 }
