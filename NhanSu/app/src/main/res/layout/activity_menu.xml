@@ -15,7 +15,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="206dp"
         android:background="@drawable/botronxanh"
-        android:text="Hồ sơ nhân viên"
+        android:text="Lương"
         android:textColor="#FFFFFF"
         android:textSize="16dp" />
 
@@ -27,11 +27,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="364dp"
-        android:text="Hồ sơ nhân viên"
+        android:background="@drawable/botron_do"
+        android:text="Thông tin nhân viên"
         android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        android:background="@drawable/botron_do">
-    </Button>
+        android:textSize="16dp"></Button>
 
 
     <View
@@ -74,7 +73,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="285dp"
         android:background="@drawable/botron_vang"
-        android:text="Hồ sơ nhân viên"
+        android:text="Lịch sử chấm công"
         android:textColor="#FFFFFF"
         android:textSize="16dp" />
 
@@ -87,7 +86,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="127dp"
         android:background="@drawable/botron_nau"
-        android:text="Hồ sơ nhân viên"
+        android:text="Thống kê"
         android:textColor="#FFFFFF"
         android:textSize="16dp" />
 
