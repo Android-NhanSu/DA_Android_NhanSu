@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageButton
-                    android:id="@+id/btn_trove_tk"
+                    android:id="@+id/btn_trove"
                     android:layout_width="58dp"
                     android:layout_height="match_parent"
                     android:background="?attr/homeAsUpIndicator" />
@@ -60,12 +60,6 @@
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/barchar"
             android:layout_width="match_parent"
-            android:layout_height="291dp"></com.github.mikephil.charting.charts.BarChart>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </FrameLayout>
+            android:layout_height="476dp"></com.github.mikephil.charting.charts.BarChart>
     </LinearLayout>
 </RelativeLayout>
