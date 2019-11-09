@@ -13,8 +13,8 @@
         <activity android:name=".Luong" />
         <activity android:name=".LSChamCong" />
         <activity android:name=".Menu" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ThongKe">
+        <activity android:name=".ThongKe" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

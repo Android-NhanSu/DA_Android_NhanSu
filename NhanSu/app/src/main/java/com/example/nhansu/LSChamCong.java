@@ -3,6 +3,7 @@ package com.example.nhansu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -17,15 +18,31 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class LSChamCong extends AppCompatActivity {
     EditText editDate;
+    ImageButton btn_tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lscham_cong);
+
+        btn_tv = findViewById(R.id.btn_trove_lscc);
+        btn_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LSChamCong.this, Menu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         setWight();
+
+
 
         List<litsitem> image_details = getListData();
         final ListView listView = (ListView) findViewById(R.id.chamcong);
