@@ -3,11 +3,13 @@ package com.example.nhansu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.nhansu.Model_Adapter.CustomListAdapter;
@@ -30,6 +32,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class ThongKe extends AppCompatActivity {
+    ImageButton btn_tvtk;
     BarChart bc;
     EditText editDate;
     @Override
@@ -37,6 +40,16 @@ public class ThongKe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_ke);
         setWight();
+
+        btn_tvtk = findViewById(R.id.btn_trove_tk);
+        btn_tvtk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ThongKe.this, Menu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         editDate.setOnClickListener(new View.OnClickListener() {

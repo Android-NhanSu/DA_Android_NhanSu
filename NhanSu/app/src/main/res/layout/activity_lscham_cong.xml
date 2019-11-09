@@ -21,8 +21,8 @@
                 android:background="@android:color/background_light">
 
                 <ImageButton
-                    android:id="@+id/btn_trove"
-                    android:layout_width="58dp"
+                    android:id="@+id/btn_trove_lscc"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:background="?attr/homeAsUpIndicator" />
 
