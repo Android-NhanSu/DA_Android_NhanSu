@@ -10,8 +10,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 
-import com.example.nhansu.Model_Adapter.CustomListAdapter;
-import com.example.nhansu.Model_Adapter.litsitem;
+import com.example.nhansu.Model_Adapter.Adapter_lscc;
+import com.example.nhansu.Model_Adapter.item_lscc;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -44,9 +44,9 @@ public class LSChamCong extends AppCompatActivity {
 
 
 
-        List<litsitem> image_details = getListData();
+        List<item_lscc> image_details = getListData();
         final ListView listView = (ListView) findViewById(R.id.chamcong);
-        listView.setAdapter(new CustomListAdapter(this,image_details));
+        listView.setAdapter(new Adapter_lscc(this,image_details));
         editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,14 +56,22 @@ public class LSChamCong extends AppCompatActivity {
 
     }
 
-    private List<litsitem> getListData() {
-        List<litsitem> list = new ArrayList<litsitem>();
-        Date today=new Date(System.currentTimeMillis());
-        SimpleDateFormat timeFormat= new SimpleDateFormat("dd/MM/yyyy");
-        String s=timeFormat.format(today.getTime());
-        litsitem vietnam = new litsitem(s, "11:20", "11:20");
-        list.add(vietnam);
-
+    private List<item_lscc> getListData() {
+        ArrayList<item_lscc> list=new ArrayList<>();
+//        List<item_lscc> list = new ArrayList<item_lscc>();
+//        Date today=new Date(System.currentTimeMillis());
+     //   SimpleDateFormat timeFormat= new SimpleDateFormat("dd/MM/yyyy");
+       // String s=timeFormat.format(today.getTime());
+      //  item_lscc cc = new item_lscc(s, "8:00", "17:00");
+        list.add(new item_lscc("01/11/2019","8:00","17:00"));
+        list.add(new item_lscc("02/11/2019","7:50","17:20"));
+        list.add(new item_lscc("03/11/2019","8:10","17:10"));
+        list.add(new item_lscc("04/11/2019","7:59","17:05"));
+        list.add(new item_lscc("05/11/2019","8:02","17:00"));
+        list.add(new item_lscc("06/11/2019","8:00","17:01"));
+        list.add(new item_lscc("07/11/2019","8:07","17:11"));
+        list.add(new item_lscc("08/11/2019","8:04","16:59"));
+        list.add(new item_lscc("09/11/2019","8:19","18:00"));
         return list;
     }
 

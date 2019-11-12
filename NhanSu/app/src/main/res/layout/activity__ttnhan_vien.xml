@@ -76,11 +76,17 @@
 
         </FrameLayout>
 
-        <ListView
-            android:id="@+id/listviewTTNV"
+        <FrameLayout
+            android:id="@+id/fram_nv"
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/lwnv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
 
-            android:layout_height="match_parent" />
+        </FrameLayout>
 
     </LinearLayout>
 

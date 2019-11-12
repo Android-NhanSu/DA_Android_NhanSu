@@ -60,6 +60,132 @@
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/barchar"
             android:layout_width="match_parent"
-            android:layout_height="359dp"></com.github.mikephil.charting.charts.BarChart>
+            android:layout_height="316dp"></com.github.mikephil.charting.charts.BarChart>
+
+        <FrameLayout
+            android:id="@+id/frm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                   <FrameLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       >
+                       <ImageView
+                           android:layout_width="56dp"
+                           android:layout_height="match_parent"
+                           android:layout_gravity="center|left"
+                           android:background="#BF0D4D"></ImageView>
+                   </FrameLayout>
+
+                    <TextView
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:text="Tổng"
+                        android:textColor="@android:color/background_dark"></TextView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="#E3631B"></ImageView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:text="Tổng ngày làm việc"
+                        android:textColor="@android:color/background_dark"></TextView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="#FFD53F"></ImageView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:text="Tổng ngày nghỉ"
+                        android:textColor="@android:color/background_dark"></TextView>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="#37A900"></ImageView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:text="Tổng ngày nghỉ có phép"
+                        android:textColor="@android:color/background_dark"></TextView>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="#855F27"></ImageView>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:text="Tổng ngày nghỉ không phép"
+                        android:textColor="@android:color/background_dark"></TextView>
+
+                </TableRow>
+            </TableLayout>
+        </FrameLayout>
     </LinearLayout>
 </RelativeLayout>

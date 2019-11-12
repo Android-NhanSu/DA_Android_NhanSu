@@ -3,12 +3,12 @@ package com.example.nhansu.Model_Adapter;
 import java.sql.Date;
 import java.sql.Time;
 
-public class litsitem {
+public class item_lscc {
     private String ngay;
     private String giovao;
     private String giora;
 
-    public litsitem(String ngay, String giovao, String giora) {
+    public item_lscc(String ngay, String giovao, String giora) {
         this.ngay = ngay;
         this.giovao = giovao;
         this.giora = giora;

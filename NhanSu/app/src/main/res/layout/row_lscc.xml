@@ -8,6 +8,7 @@
         android:id="@+id/txtngay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
         android:textColor="@color/colorAccent"
         android:textSize="24dp" />
 
@@ -20,7 +21,7 @@
             android:id="@+id/giovao"
             android:layout_width="125dp"
             android:layout_height="50dp"
-            android:text="Gio vao"
+            android:text="Giờ vào"
             android:textSize="24dp"
             android:textColor="@color/colorAccent"/>
 
@@ -43,7 +44,7 @@
             android:id="@+id/giora"
             android:layout_width="125dp"
             android:layout_height="50dp"
-            android:text="Gio ra"
+            android:text="Giờ ra"
             android:textSize="24dp"
             android:textColor="@color/colorAccent"/>
 
