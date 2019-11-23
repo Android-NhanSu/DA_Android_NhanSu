@@ -71,6 +71,8 @@ public class Adapter_lscc extends BaseAdapter {
         TextView gv;
         TextView gr;
     }
+
+    // seach view
     public void filter(String charText) {
         charText = charText.toLowerCase(Locale.getDefault());
         listData.clear();
