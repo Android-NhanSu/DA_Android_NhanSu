@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.nhansu.R;
 
@@ -44,17 +45,20 @@ public class Adapter_nv extends BaseAdapter {
         if (view == null) {
             view = layoutInflater.inflate(R.layout.row_nv, null);
             holder = new Adapter_nv.ViewHolder();
-            holder.manv= (EditText) view.findViewById(R.id.edit_ma);
+            holder.manv= (TextView) view.findViewById(R.id.edit_ma);
             holder.hoten= (EditText) view.findViewById(R.id.edit_ten);
-            holder.gioitinh= (EditText) view.findViewById(R.id.edit_gioitinh);
+            holder.gioitinh= (TextView) view.findViewById(R.id.edit_gioitinh);
             holder.sdt= (EditText) view.findViewById(R.id.edit_sdt);
             holder.email= (EditText) view.findViewById(R.id.edit_email);
-            holder.dc= (EditText) view.findViewById(R.id.edit_dc);
+            holder.dc= (TextView) view.findViewById(R.id.edit_dc);
             holder.cv= (EditText) view.findViewById(R.id.edit_cv);
             holder.phong= (EditText) view.findViewById(R.id.edit_phong);
             holder.nn=(EditText) view.findViewById(R.id.edit_nn);
             holder.trinhdo=(EditText) view.findViewById(R.id.edit_td);
             holder.nvlam=(EditText) view.findViewById(R.id.edit_nvl);
+            holder.ns=(TextView) view.findViewById(R.id.edit_ns);
+            holder.quequan=(TextView) view.findViewById(R.id.edit_quequan);
+
             view.setTag(holder);
         } else {
             holder = (Adapter_nv.ViewHolder) view.getTag();
@@ -75,16 +79,18 @@ public class Adapter_nv extends BaseAdapter {
         return view;
     }
     static class ViewHolder {
-        EditText manv;
+        TextView manv;
         EditText hoten;
-        EditText gioitinh;
+        TextView gioitinh;
         EditText sdt;
         EditText email;
-        EditText dc;
+        TextView dc;
         EditText cv;
         EditText phong;
         EditText nn;
         EditText trinhdo;
         EditText nvlam;
+        TextView ns;
+        TextView quequan;
     }
 }

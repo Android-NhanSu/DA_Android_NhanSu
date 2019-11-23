@@ -16,14 +16,17 @@
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
                 android:text="Mã nhân viên"
+                android:textSize="14dp"
                 android:gravity="center|left"
                 android:textColor="@android:color/background_dark">
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_ma"
                 android:layout_width="299dp"
-                android:layout_height="match_parent"></EditText>
+                android:textSize="14dp"
+                android:gravity="center|left"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
 
@@ -40,6 +43,7 @@
                 android:layout_height="match_parent"
                 android:text="Tên nhân viên"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
@@ -47,6 +51,8 @@
             <EditText
                 android:id="@+id/edit_ten"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
@@ -64,14 +70,17 @@
                 android:layout_height="match_parent"
                 android:text="Giới tính"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_gioitinh"
                 android:layout_width="299dp"
-                android:layout_height="match_parent"></EditText>
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -87,6 +96,7 @@
                 android:layout_height="match_parent"
                 android:text="Số điện thoại"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
@@ -94,6 +104,8 @@
             <EditText
                 android:id="@+id/edit_sdt"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"></EditText>
         </LinearLayout>
     </FrameLayout>
@@ -109,6 +121,7 @@
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
                 android:text="email"
+                android:textSize="14dp"
                 android:gravity="center|left"
                 android:textColor="@android:color/background_dark">
 
@@ -117,6 +130,8 @@
             <EditText
                 android:id="@+id/edit_email"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"></EditText>
         </LinearLayout>
     </FrameLayout>
@@ -131,16 +146,19 @@
             <TextView
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
-                android:text="Địa chỉ"
+                android:text="Ngày sinh"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
 
-            <EditText
-                android:id="@+id/edit_dc"
+            <TextView
+                android:id="@+id/edit_ns"
                 android:layout_width="299dp"
-                android:layout_height="match_parent"></EditText>
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -154,6 +172,7 @@
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
                 android:text="Chức vụ"
+                android:textSize="14dp"
                 android:gravity="center|left"
                 android:textColor="@android:color/background_dark">
 
@@ -162,6 +181,8 @@
             <EditText
                 android:id="@+id/edit_cv"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"></EditText>
         </LinearLayout>
 
@@ -177,6 +198,7 @@
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
                 android:text="Phòng"
+                android:textSize="14dp"
                 android:gravity="center|left"
                 android:textColor="@android:color/background_dark">
 
@@ -185,6 +207,8 @@
             <EditText
                 android:id="@+id/edit_phong"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"></EditText>
         </LinearLayout>
 
@@ -202,6 +226,7 @@
                 android:layout_height="match_parent"
                 android:text="Ngoại ngữ"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
@@ -209,6 +234,8 @@
             <EditText
                 android:id="@+id/edit_nn"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent"></EditText>
         </LinearLayout>
     </FrameLayout>
@@ -225,6 +252,7 @@
                 android:layout_height="match_parent"
                 android:text="Trình độ"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
@@ -232,6 +260,37 @@
             <EditText
                 android:id="@+id/edit_td"
                 android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:layout_height="match_parent">
+
+            </EditText>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:text="Ngày vào làm"
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:textColor="@android:color/background_dark">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_nvl"
+                android:layout_width="299dp"
+                android:gravity="center|left"
+                android:textSize="14dp"
                 android:layout_height="match_parent">
 
             </EditText>
@@ -248,18 +307,45 @@
             <TextView
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
-                android:text="Ngày vào làm"
+                android:text="Địa chỉ"
                 android:gravity="center|left"
+                android:textSize="14dp"
                 android:textColor="@android:color/background_dark">
 
             </TextView>
 
-            <EditText
-                android:id="@+id/edit_nvl"
+            <TextView
+                android:id="@+id/edit_dc"
                 android:layout_width="299dp"
-                android:layout_height="match_parent">
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:layout_height="match_parent"></TextView>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
-            </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:text="Quê quán"
+                android:textSize="14dp"
+                android:gravity="center|left"
+                android:textColor="@android:color/background_dark">
+            </TextView>
+
+            <TextView
+                android:id="@+id/edit_quequan"
+                android:layout_width="299dp"
+                android:textSize="14dp"
+                android:gravity="center|left"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

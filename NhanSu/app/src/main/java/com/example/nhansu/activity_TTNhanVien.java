@@ -41,7 +41,7 @@ public class activity_TTNhanVien extends AppCompatActivity {
     private List<item_nv> getListData() {
         ArrayList<item_nv> list = new ArrayList<>();
         list.add(new item_nv("2001160306","Lê Thị Mỹ Hương","nữ","0376007840","huong98@gmail.com","17 Bùi Xuân Phái","Trưởng Phòng"
-                ,"Nhân sự","Tiếng anh","Đại học","2/10/2015"));
+                ,"Nhân sự","Tiếng anh","Đại học","2/10/2015","16/02/1998","Quảng Ngãi"));
         return list;
     }
 

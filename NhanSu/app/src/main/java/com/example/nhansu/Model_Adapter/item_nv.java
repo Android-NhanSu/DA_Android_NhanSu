@@ -12,8 +12,11 @@ public class item_nv {
     public String nn;
     public String trinhdo;
     public String nvlam;
+    public String ns;
+    public String quequan;
 
-    public item_nv(String manv, String hoten, String gioitinh, String sdt, String email, String dc, String cv, String phong, String nn, String trinhdo, String nvlam) {
+
+    public item_nv(String manv, String hoten, String gioitinh, String sdt, String email, String dc, String cv, String phong, String nn, String trinhdo, String nvlam, String ns, String quequan) {
         this.manv = manv;
         this.hoten = hoten;
         this.gioitinh = gioitinh;
@@ -25,6 +28,8 @@ public class item_nv {
         this.nn = nn;
         this.trinhdo = trinhdo;
         this.nvlam = nvlam;
+        this.ns = ns;
+        this.quequan = quequan;
     }
 
     public String getManv() {
@@ -113,5 +118,21 @@ public class item_nv {
 
     public void setNvlam(String nvlam) {
         this.nvlam = nvlam;
+    }
+
+    public String getNs() {
+        return ns;
+    }
+
+    public void setNs(String ns) {
+        this.ns = ns;
+    }
+
+    public String getQuequan() {
+        return quequan;
+    }
+
+    public void setQuequan(String quequan) {
+        this.quequan = quequan;
     }
 }

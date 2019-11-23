@@ -20,7 +20,7 @@
                     android:id="@+id/btn_trove_tk"
                     android:layout_width="58dp"
                     android:layout_height="match_parent"
-                    android:background="?attr/homeAsUpIndicator" />
+                    android:background="@drawable/lefl" />
 
 
                 <TextView
@@ -28,9 +28,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Thống kê ngày nghĩ"
+                    android:text="Thống kê ngày nghỉ"
                     android:textColor="@color/colorAccent"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </FrameLayout>
 
