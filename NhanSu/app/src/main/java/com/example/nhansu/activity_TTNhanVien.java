@@ -10,22 +10,35 @@ import android.widget.ListView;
 
 import com.example.nhansu.Model_Adapter.Adapter_lscc;
 import com.example.nhansu.Model_Adapter.Adapter_nv;
+import com.example.nhansu.Model_Adapter.UserModel_NV;
 import com.example.nhansu.Model_Adapter.item_lscc;
 import com.example.nhansu.Model_Adapter.item_nv;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class activity_TTNhanVien extends AppCompatActivity {
     ImageButton btn_tv;
+    UserModel_NV nv=new UserModel_NV();
+    Adapter_nv adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__ttnhan_vien);
 
-        List<item_nv> nv = getListData();
+        List<item_nv> ls= null;
+        try {
+            ls = nv.loadnv();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         final ListView listView = (ListView) findViewById(R.id.lwnv);
-        listView.setAdapter(new Adapter_nv(this,nv));
+
+        adapter= new Adapter_nv(this,ls);
+        listView.setAdapter(adapter);
+
 
         ////////////////////////////////////
         btn_tv = findViewById(R.id.btn_trove_ttnv);
@@ -34,7 +47,6 @@ public class activity_TTNhanVien extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(activity_TTNhanVien.this, Menu.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

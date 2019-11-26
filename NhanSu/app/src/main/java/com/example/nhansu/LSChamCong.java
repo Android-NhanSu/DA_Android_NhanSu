@@ -44,7 +44,6 @@ public class LSChamCong extends AppCompatActivity implements SearchView.OnQueryT
             public void onClick(View view) {
                 Intent intent = new Intent(LSChamCong.this, Menu.class);
                 startActivity(intent);
-                finish();
             }
         });
        // setWight();
@@ -54,7 +53,7 @@ public class LSChamCong extends AppCompatActivity implements SearchView.OnQueryT
         List<item_lscc> ls= null;
         try {
             ls = us.getuserlist();
-            Log.d(TAG, "onCreate: "+ls.size());
+//            Log.d(TAG, "onCreate: "+ls.size());
         } catch (SQLException e) {
             e.printStackTrace();
         }

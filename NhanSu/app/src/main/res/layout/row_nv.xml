@@ -26,6 +26,7 @@
                 android:layout_width="299dp"
                 android:textSize="14dp"
                 android:gravity="center|left"
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
@@ -48,11 +49,13 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_ten"
                 android:layout_width="299dp"
                 android:gravity="center|left"
+                android:textColor="@android:color/background_dark"
                 android:textSize="14dp"
+
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
@@ -79,6 +82,7 @@
                 android:id="@+id/edit_gioitinh"
                 android:layout_width="299dp"
                 android:gravity="center|left"
+                android:textColor="@android:color/background_dark"
                 android:textSize="14dp"
                 android:layout_height="match_parent"></TextView>
         </LinearLayout>
@@ -101,12 +105,16 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_sdt"
                 android:layout_width="299dp"
+                android:layout_height="match_parent"
                 android:gravity="center|left"
+                android:textColor="@android:color/background_dark"
                 android:textSize="14dp"
-                android:layout_height="match_parent"></EditText>
+               />
+
+
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -127,12 +135,13 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_email"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
-                android:layout_height="match_parent"></EditText>
+                android:textColor="@android:color/background_dark"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -158,6 +167,8 @@
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
+
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
@@ -178,12 +189,13 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_cv"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
-                android:layout_height="match_parent"></EditText>
+                android:textColor="@android:color/background_dark"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
 
     </FrameLayout>
@@ -204,12 +216,13 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_phong"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
-                android:layout_height="match_parent"></EditText>
+                android:textColor="@android:color/background_dark"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
 
     </FrameLayout>
@@ -231,12 +244,13 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_nn"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
-                android:layout_height="match_parent"></EditText>
+                android:textColor="@android:color/background_dark"
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -257,14 +271,15 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_td"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent">
 
-            </EditText>
+            </TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -286,14 +301,15 @@
 
             </TextView>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_nvl"
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent">
 
-            </EditText>
+            </TextView>
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -319,6 +335,7 @@
                 android:layout_width="299dp"
                 android:gravity="center|left"
                 android:textSize="14dp"
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
@@ -332,6 +349,7 @@
             android:orientation="horizontal">
 
             <TextView
+
                 android:layout_width="112dp"
                 android:layout_height="match_parent"
                 android:text="Quê quán"
@@ -345,6 +363,7 @@
                 android:layout_width="299dp"
                 android:textSize="14dp"
                 android:gravity="center|left"
+                android:textColor="@android:color/background_dark"
                 android:layout_height="match_parent"></TextView>
         </LinearLayout>
     </FrameLayout>
