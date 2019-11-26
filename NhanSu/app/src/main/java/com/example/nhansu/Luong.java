@@ -22,11 +22,15 @@ import java.util.ListIterator;
 
 import com.example.nhansu.Model_Adapter.Adapter_Phat;
 import com.example.nhansu.Model_Adapter.Adapter_khenthuong;
+import com.example.nhansu.Model_Adapter.Adapter_lscc;
+import com.example.nhansu.Model_Adapter.UserModel_Luong;
 import com.example.nhansu.Model_Adapter.item_khenthuong;
 import com.example.nhansu.Model_Adapter.item_phat;
 public class Luong extends AppCompatActivity {
 
     EditText editDate;
+    UserModel_Luong luong = new UserModel_Luong();
+    Adapter_khenthuong adapter;
 
     //KhenThuong
     GridView gridViewKT;
