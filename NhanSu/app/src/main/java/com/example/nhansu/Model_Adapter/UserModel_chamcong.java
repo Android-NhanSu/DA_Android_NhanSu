@@ -17,7 +17,6 @@ public class UserModel_chamcong {
 
     public UserModel_chamcong() {
         connection = jdbcController.ConnnectionData(); // Tạo kết nối tới database
-
     }
 
     public List<item_lscc> getuserlist() throws SQLException {

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Menu">
 
+
     <Button
         android:id="@+id/btn_luong"
         android:layout_width="363dp"
@@ -13,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginBottom="206dp"
+        android:layout_marginBottom="178dp"
         android:background="@drawable/botronxanh"
         android:text="Lương"
         android:textColor="#FFFFFF"
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="99dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="502dp"
+        android:layout_marginBottom="506dp"
         android:background="#032C35" />
 
     <TextView
@@ -59,9 +60,17 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignWithParentIfMissing="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignBottom="@+id/view"
 
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="279dp"
+        android:layout_marginRight="279dp"
+        android:layout_marginBottom="-41dp"
         android:src="@drawable/logo_dhcntp" />
 
     <Button
@@ -71,7 +80,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginBottom="285dp"
+        android:layout_marginBottom="271dp"
         android:background="@drawable/botron_vang"
         android:text="Lịch sử chấm công"
         android:textColor="#FFFFFF"
@@ -84,7 +93,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginBottom="127dp"
+        android:layout_marginBottom="85dp"
         android:background="@drawable/botron_nau"
         android:text="Thống kê"
         android:textColor="#FFFFFF"
@@ -92,13 +101,17 @@
 
     <Button
         android:id="@+id/btn_dx"
-        android:layout_width="154dp"
-        android:layout_height="38dp"
+        android:layout_width="98dp"
+        android:layout_height="28dp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="234dp"
-        android:layout_marginBottom="76dp"
-        android:background="@drawable/botron_tim"
+        android:layout_marginLeft="291dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="616dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Đăng xuất"
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
