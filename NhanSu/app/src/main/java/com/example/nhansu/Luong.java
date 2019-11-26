@@ -5,13 +5,16 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.SearchView;
 
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,98 +26,129 @@ import java.util.ListIterator;
 import com.example.nhansu.Model_Adapter.Adapter_Phat;
 import com.example.nhansu.Model_Adapter.Adapter_khenthuong;
 import com.example.nhansu.Model_Adapter.Adapter_lscc;
+import com.example.nhansu.Model_Adapter.Adapter_luong;
 import com.example.nhansu.Model_Adapter.UserModel_Luong;
+import com.example.nhansu.Model_Adapter.UserModel_Phat;
+import com.example.nhansu.Model_Adapter.UserModel_listLuong;
 import com.example.nhansu.Model_Adapter.item_khenthuong;
+import com.example.nhansu.Model_Adapter.item_lscc;
+import com.example.nhansu.Model_Adapter.item_luong;
 import com.example.nhansu.Model_Adapter.item_phat;
-public class Luong extends AppCompatActivity {
-
+public class Luong<lsss, search> extends AppCompatActivity  implements SearchView.OnQueryTextListener, com.example.nhansu.phat, Luongg {
+    private static final String TAG = "pp";
     EditText editDate;
     UserModel_Luong luong = new UserModel_Luong();
+    UserModel_Phat phat = new UserModel_Phat();
+    UserModel_listLuong listLuong = new UserModel_listLuong();
     Adapter_khenthuong adapter;
+    Adapter_Phat adapter_phat;
+    Adapter_luong adapter_luong;
+    SearchView search;
 
-    //KhenThuong
-    GridView gridViewKT;
-    item_khenthuong a= new item_khenthuong("1/1/1111","acb","1000000");
-    item_khenthuong b= new item_khenthuong("1/1/1111","acb","1000000");
-    List<item_khenthuong> itemssss_KT;
-
-   //Phat
-    GridView gridViewPhat;
-    item_phat c= new item_phat("1/1/1111","acb","1000000");
-    item_phat d= new item_phat("1/1/1111","acb","1000000");
-    List<item_phat> itemssss_Phat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_luong);
-        setWight();
-
-        editDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ChonNgay();
-            }
-        });
 
 
-        itemssss_KT= new ArrayList<item_khenthuong>();
-        itemssss_KT.add(a);
-        itemssss_KT.add(b);
-        Adapter_khenthuong arrayAdapter= new Adapter_khenthuong(this, itemssss_KT);
-        gridViewKT.setAdapter(arrayAdapter);
+       // editDate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ChonNgay();
+//            }
+//        });
+/////////////// khen thuong /////////////////////
+        List<item_khenthuong> ls= null;
+        try {
+            ls = luong.getuserlist_KhenThuong();
 
-
-        itemssss_Phat= new ArrayList<item_phat>();
-        itemssss_Phat.add(c);
-        itemssss_Phat.add(d);
-        Adapter_Phat arrayAdapter_P= new Adapter_Phat(this, itemssss_Phat);
-        gridViewPhat.setAdapter(arrayAdapter_P);
-
-
-    }
-    private void setWight(){
-        editDate = (EditText) findViewById(R.id.editTextDate);
-        gridViewKT= (GridView) findViewById(R.id.gridviewKhenThuong);
-        gridViewPhat= (GridView) findViewById(R.id.gridviewPhat);
-
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
 
-    private void ChonNgay () {
-            final Calendar calendar = Calendar.getInstance();
-            int ngay = calendar.get(Calendar.DATE);
-            int thang = calendar.get(Calendar.MONTH);
-            int nam = calendar.get(Calendar.YEAR);
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                    // i:năm - i1: tháng - i:2 ngày
-                    calendar.set(i,i1,i2);
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY");
-                    editDate.setText(simpleDateFormat.format(calendar.getTime()));
-                }
-            }, nam, thang, ngay);
-            datePickerDialog.show();
+    final GridView gridView = (GridView)findViewById(R.id.gridviewKhenThuong);
+
+    adapter= new Adapter_khenthuong(this, R.layout.griditem_khenthuong, ls);
+
+        gridView.setAdapter(adapter);
+
+//////////////// ky luat /////////////////////////////////
+        List<item_phat> lss= null;
+        try {
+            lss = phat.getuserlist_Phat();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
+        final GridView gridView1 = (GridView) findViewById(R.id.gridviewPhat);
 
+        adapter_phat= new Adapter_Phat(this, R.layout.griditem_phat, lss);
 
-    private  List<item_khenthuong> getListData() {
-        List<item_khenthuong> list = new ArrayList<item_khenthuong>();
-        item_khenthuong ds_khenthuong = new item_khenthuong("Ngày", "Lý do", "Tiền thưởng");
+        gridView1.setAdapter(adapter_phat);
 
-        list.add(ds_khenthuong);
-        return list;
+/////////////////////////// luong /////////////////////////////
+        List<item_luong> lsss= null;
+
+        try {
+            lsss = listLuong.getuserlist_luong();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    final ListView listView = (ListView) findViewById(R.id.list_luong);
+
+    adapter_luong= new Adapter_luong(this, R.layout.row_luong, lsss);
+
+        listView.setAdapter(adapter_luong);
+
+        // tim kiếm
+
+        search = findViewById(R.id.Search1);
+
+        search.setQuery("",false);
+        search.setOnQueryTextListener(this);
     }
 
-    private  List<item_phat> getListDataPhat() {
-        List<item_phat> list = new ArrayList<item_phat>();
-        item_phat ds_Phat = new item_phat("Ngày", "Lý do", "Tiền phạt");
-
-        list.add(ds_Phat);
-
-        return list;
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
     }
 
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String text = newText;
+        adapter.filter(text);
+        return false;
+    }
+
+
+   // @Override
+    public boolean onQueryTextSubmit1(String query1) {
+        return false;
+    }
+
+    public boolean onQueryTextChange1(String newText) {
+        String text = newText;
+        adapter_phat.filter1(text);
+        return false;
+    }
+
+    //    private void ChonNgay () {
+//            final Calendar calendar = Calendar.getInstance();
+//            int ngay = calendar.get(Calendar.DATE);
+//            int thang = calendar.get(Calendar.MONTH);
+//            int nam = calendar.get(Calendar.YEAR);
+//            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+//                @Override
+//                public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+//                    // i:năm - i1: tháng - i:2 ngày
+//                    calendar.set(i,i1,i2);
+//                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY");
+//                    editDate.setText(simpleDateFormat.format(calendar.getTime()));
+//                }
+//            }, nam, thang, ngay);
+//            datePickerDialog.show();
+//        }
 }
 

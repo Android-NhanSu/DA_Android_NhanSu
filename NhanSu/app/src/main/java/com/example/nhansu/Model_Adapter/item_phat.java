@@ -10,6 +10,7 @@ public class item_phat {
     }
 
     public void setNgayPhat(String ngayPhat) {
+
         NgayPhat = ngayPhat;
     }
 
@@ -34,4 +35,7 @@ public class item_phat {
         LydoPhat = lydoPhat;
         TienPhat = tienPhat;
     }
+
+
+
 }
