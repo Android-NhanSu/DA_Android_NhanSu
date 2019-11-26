@@ -10,17 +10,22 @@ import android.widget.TextView;
 
 import com.example.nhansu.R;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Adapter_Phat extends BaseAdapter{
     private List<item_phat> listDataPhat;
     private LayoutInflater layoutInflater;
     private Context context;
+    private ArrayList<item_phat> arrayList;
 
-    public Adapter_Phat(Context aContext, List<item_phat> listDataPhat) {
+    public Adapter_Phat(Context aContext, int griditem_phat, List<item_phat> listDataPhat) {
         this.context = aContext;
         this.listDataPhat = listDataPhat;
         layoutInflater = LayoutInflater.from(aContext);
+        this.arrayList = new ArrayList<item_phat>();
+        this.arrayList.addAll(listDataPhat);
     }
 
     @Override
@@ -75,5 +80,22 @@ public class Adapter_Phat extends BaseAdapter{
         TextView countryNameView;
         TextView populationView;
         TextView flagView;
+    }
+
+    // seach view
+    public void filter1(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        listDataPhat.clear();
+        if (charText.length() == 0) {
+            listDataPhat.addAll(arrayList);
+        } else {
+            for (item_phat wp : arrayList) {
+                if ((wp.getNgayPhat().toLowerCase(Locale.getDefault()).contains(charText)) )
+                {
+                    listDataPhat.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

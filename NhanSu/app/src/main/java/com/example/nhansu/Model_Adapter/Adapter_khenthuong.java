@@ -8,23 +8,29 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.nhansu.LSChamCong;
 import com.example.nhansu.R;
 
+import java.util.ArrayList;
 import java.util.List;
-
-
+import java.util.Locale;
 
 
 public class Adapter_khenthuong extends BaseAdapter {
     private List<item_khenthuong> listData;
     private LayoutInflater layoutInflater;
     private Context context;
+    private ArrayList<item_khenthuong> arrayList;
 
-    public Adapter_khenthuong(Context aContext, List<item_khenthuong> listData) {
+    public Adapter_khenthuong(Context aContext, int griditem_khenthuong, List<item_khenthuong> listData) {
         this.context = aContext;
         this.listData = listData;
         layoutInflater = LayoutInflater.from(aContext);
+        this.arrayList = new ArrayList<item_khenthuong>();
+        this.arrayList.addAll(listData);
     }
+
+
 
     @Override
     public int getCount() {
@@ -78,5 +84,22 @@ public class Adapter_khenthuong extends BaseAdapter {
         TextView countryNameView;
         TextView populationView;
         TextView flagView;
+    }
+
+    // seach view
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        listData.clear();
+        if (charText.length() == 0) {
+            listData.addAll(arrayList);
+        } else {
+            for (item_khenthuong wp : arrayList) {
+                if ((wp.getNgay().toLowerCase(Locale.getDefault()).contains(charText)) )
+                {
+                    listData.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

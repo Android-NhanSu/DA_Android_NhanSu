@@ -11,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 
+import com.example.nhansu.Model_Adapter.Adapter_khenthuong;
 import com.example.nhansu.Model_Adapter.Adapter_lscc;
 import com.example.nhansu.Model_Adapter.UserModel_chamcong;
 import com.example.nhansu.Model_Adapter.item_lscc;
@@ -22,6 +23,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -59,6 +61,7 @@ public class LSChamCong extends AppCompatActivity implements SearchView.OnQueryT
         }
 
         final ListView listView = (ListView) findViewById(R.id.chamcong);
+
 
         adapter= new Adapter_lscc(this, R.layout.row_lscc, ls);
 

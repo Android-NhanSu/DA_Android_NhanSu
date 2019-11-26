@@ -33,27 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
-
-<<<<<<< HEAD
-=======
-
-        btn_dn = findViewById(R.id.btn_dn);
-        btn_dn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Menu.class);
-                startActivity(intent);
-                finish();
-            }
-        });
->>>>>>> f1de5e48ed7777fe32650f7b379ec46bf5b2e001
-
-
-//
     }
-
     public void dangnhap(View view) {
-
         Username = (EditText) findViewById(R.id.User);
         Password = (EditText) findViewById(R.id.Password);
         user = Username.getText().toString();
