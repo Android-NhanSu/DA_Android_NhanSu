@@ -28,7 +28,8 @@ public class activity_TTNhanVien extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__ttnhan_vien);
 
-        List<item_nv> ls= null;
+
+       /* List<item_nv> ls= null;
         try {
             ls = nv.loadnv();
         } catch (SQLException e) {
@@ -37,15 +38,15 @@ public class activity_TTNhanVien extends AppCompatActivity {
         final ListView listView = (ListView) findViewById(R.id.lwnv);
 
         adapter= new Adapter_nv(this,ls);
-        listView.setAdapter(adapter);
+        listView.setAdapter(adapter);*/
 
 
         ////////////////////////////////////
-        btn_tv = findViewById(R.id.btn_trove_ttnv);
+        btn_tv = findViewById(R.id.Suattnv);
         btn_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_TTNhanVien.this, Menu.class);
+                Intent intent = new Intent(activity_TTNhanVien.this, Sua_TT_NhanVien.class);
                 startActivity(intent);
             }
         });

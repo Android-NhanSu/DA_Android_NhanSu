@@ -21,7 +21,7 @@ public class UserModel_NV {
 
     }
 
-    public List<item_nv> loadnv() throws SQLException {
+    public List<item_nv> loadnv( String Mnv) throws SQLException {
         List<item_nv> list = new ArrayList<>();
 //        connection = jdbcController.ConnnectionData();
 //        Statement statement = null;
@@ -29,11 +29,11 @@ public class UserModel_NV {
 
         Statement statement = connection.createStatement();
 
-        String sql = "SELECT MANV,NHANVIEN.HOTEN, GIOITINH, DIENTHOAI, EMAIL, NGAYSINH,  TENCHUCVU, TENPHONGBAN, TENNGOAINGU, TENTRINHDOHOCVAN, NGAYVAOLAM, DIACHITHUONGTRU, QUEQUAN\n" +
+        String sql ="SELECT MANV,NHANVIEN.HOTEN, GIOITINH, DIENTHOAI, EMAIL, NGAYSINH,  TENCHUCVU, TENPHONGBAN, TENNGOAINGU, TENTRINHDOHOCVAN, NGAYVAOLAM, DIACHITHUONGTRU, QUEQUAN\n" +
                 "FROM NHANVIEN , HOSOTUYENDUNG, CHUCVU, PHONGBAN, NGOAINGU, TRINHDOHOCVAN, CHITIETNGOAINGU\n" +
                 "WHERE NHANVIEN.MAHOSO=HOSOTUYENDUNG.MAUNGVIEN AND NHANVIEN.MAPHONGBAN=PHONGBAN.MAPHONGBAN AND NHANVIEN.MACHUCVU=CHUCVU.MACHUCVU AND\n" +
                 " HOSOTUYENDUNG.MATRINHDOHOCVAN=TRINHDOHOCVAN.MATRINHDOHOCVAN AND HOSOTUYENDUNG.MAUNGVIEN=CHITIETNGOAINGU.MAUNGVIEN AND NGOAINGU.MANGOAINGU=CHITIETNGOAINGU.MANGOAINGU\n" +
-                " AND MANV='NV000001'\n";
+                " AND MANV='"+Mnv+"";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
@@ -48,16 +48,16 @@ public class UserModel_NV {
         connection.close();// Đóng kết nối
         return list;
     }
-//    public boolean Update(item_nv objUser) throws SQLException {
-//        Statement statement = connection.createStatement();// Tạo đối tượng Statement.
-//        String sql = "Update HOSOTUYENDUNG set Name = " + objUser.getName() + " where ID = " + objUser.getID();
-//        if (statement.executeUpdate(sql) > 0) {
-//            connection.close();
-//            return true;
-//        } else
-//            connection.close();
-//        return false;
-//    }
+    public boolean Update(item_suattnv objUser) throws SQLException {
+        Statement statement = connection.createStatement();// Tạo đối tượng Statement.
+       String sql = "update HOSOTUYENDUNG SET DIENTHOAI="+objUser.getSdtuv()+",DIACHITHUONGTRU="+objUser.getDiachiuv()+", EMAIL="+objUser.getEmailuv()+"from HOSOTUYENDUNG INNER JOIN NHANVIEN on(HOSOTUYENDUNG.MAUNGVIEN=NHANVIEN.MAHOSO) where  MANV="+objUser.getManv();
+        if (statement.executeUpdate(sql) > 0) {
+            connection.close();
+            return true;
+        } else
+            connection.close();
+        return false;
+    }
     private class connect extends AsyncTask<Void,Void,Connection> {
 
         @Override
@@ -67,4 +67,5 @@ public class UserModel_NV {
             return connection;
         }
     }
+
 }
