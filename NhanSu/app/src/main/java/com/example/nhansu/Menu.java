@@ -13,16 +13,20 @@ public class Menu extends AppCompatActivity {
     Button btn_chamCong;
     Button btn_dx;
     Button btn_tk;
+    String user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        user = getIntent().getStringExtra("Username");
 
         btn_nv = findViewById(R.id.btn_ttnv);
         btn_nv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, activity_TTNhanVien.class);
+                intent.putExtra("Username",user);
                 startActivity(intent);
             }
         });

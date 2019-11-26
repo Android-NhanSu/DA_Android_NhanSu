@@ -22,19 +22,21 @@
 
                 <TextView
                     android:id="@+id/textView_ChamCong"
-                    android:layout_width="356dp"
+                    android:layout_width="361dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="Thông Tin Nhân Viên"
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
-                <ImageButton
+                <Button
                     android:id="@+id/Suattnv"
-                    android:layout_width="34dp"
+                    android:layout_width="match_parent"
                     android:layout_height="38dp"
                     android:layout_gravity="center"
-                    />
+                    android:text="sửa"
+                    android:textSize="10dp"
+                    android:background="@color/colorPrimaryDark"/>
             </LinearLayout>
         </FrameLayout>
 
@@ -51,15 +53,15 @@
                 android:layout_marginBottom="502dp"
                 android:background="#032C35"></View>
 
-            <TextView
-                android:id="@+id/textView_Ten"
-                android:layout_width="184dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="right"
-                android:text="Lê Thị Mỹ Hương"
-                android:textColor="#ffff"
-                android:textSize="20sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView_Ten"-->
+<!--                android:layout_width="184dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="right"-->
+<!--                android:text="Lê Thị Mỹ Hương"-->
+<!--                android:textColor="#ffff"-->
+<!--                android:textSize="20sp" />-->
 
 
             <com.example.nhansu.Model_Adapter.CicleImage
