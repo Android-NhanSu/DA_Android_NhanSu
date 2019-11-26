@@ -24,7 +24,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, activity_TTNhanVien.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -34,7 +33,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Luong.class);
                 startActivity(intent);
-                finish();
             }
         });
         btn_chamCong = findViewById(R.id.btn_lscc);
@@ -43,7 +41,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, LSChamCong.class);
                 startActivity(intent);
-                finish();
             }
         });
         btn_tk = findViewById(R.id.btn_tk);
@@ -52,7 +49,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, ThongKe.class);
                 startActivity(intent);
-                finish();
             }
         });
         btn_dx = findViewById(R.id.btn_dx);
@@ -61,7 +57,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
