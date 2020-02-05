@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Menu.class);
                     intent.putExtra("Username", user);///////////////////
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(this, "Thất bại", Toast.LENGTH_LONG).show();
                 }
